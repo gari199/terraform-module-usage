@@ -4,8 +4,8 @@ provider "aws" {
 
 #RDS MySql Example
 module "rds-mysql" {
-  source  = "app.terraform.io/ACME_Organization/rds-mysql/aws"
-  version = "1.0.0"
+  source                 = "app.terraform.io/ACME_Organization/rds-mysql/aws"
+  version                = "1.0.0"
   account_id             = "637423344778"
   allocated_storage      = "20"
   engine_version         = "8.0"
@@ -19,10 +19,10 @@ module "rds-mysql" {
 
 #VPC exmaple
 module "vpc" {
-  source  = "app.terraform.io/ACME_Organization/vpc/aws"
-  version = "1.0.0"
-  region = "eu-central-1"
-  project_name                 = "my-vpc"
+  source                       = "app.terraform.io/ACME_Organization/vpc/aws"
+  version                      = "1.0.0"
+  region                       = "eu-central-1"
+  project_name                 = "module-project"
   vpc_cidr                     = "10.0.0.0/16"
   public_subnet_az1_cidr       = "10.0.0.0/24"
   public_subnet_az2_cidr       = "10.0.1.0/24"
