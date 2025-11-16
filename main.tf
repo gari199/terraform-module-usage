@@ -4,7 +4,7 @@ provider "aws" {
 
 #RDS MySql Example
 module "rds-mysql" {
-  source                 = "app.terraform.io/ACME_Organization/rds-mysql/aws"
+  source                 = "app.terraform.io/NimbusMart_Organization/rds-mysql/aws"
   version                = "1.0.0"
   account_id             = "637423344778"
   allocated_storage      = "20"
@@ -19,7 +19,7 @@ module "rds-mysql" {
 
 #VPC exmaple
 module "vpc" {
-  source                       = "app.terraform.io/ACME_Organization/vpc/aws"
+  source                       = "app.terraform.io/NimbusMart_Organization/vpc/aws"
   version                      = "1.0.0"
   region                       = "eu-central-1"
   project_name                 = "module-project"
